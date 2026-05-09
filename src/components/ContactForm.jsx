@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { db } from '../lib/firebase';
-import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { Send, Loader2, Calendar, Phone, Mail, ArrowRight } from 'lucide-react';
 
 const ContactForm = ({ selectedService = "" }) => {
@@ -18,17 +16,12 @@ const ContactForm = ({ selectedService = "" }) => {
     e.preventDefault();
     setStatus('loading');
 
-    try {
-      await addDoc(collection(db, "leads"), {
-        ...formData,
-        timestamp: serverTimestamp()
-      });
+    // Simulate API call
+    setTimeout(() => {
+      console.log('Form data:', formData);
       setStatus('success');
       setFormData({ name: '', email: '', phone: '', service: selectedService, message: '' });
-    } catch (error) {
-      console.error("Error adding document: ", error);
-      setStatus('error');
-    }
+    }, 1500);
   };
 
   return (
