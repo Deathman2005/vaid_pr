@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-dark: #163A2E;
+  --color-brand-lime: #C7FF2F;
+  --color-brand-bg: #F5F5F3;
+  --color-brand-text: #0F172A;
+  --color-brand-white: #FFFFFF;
+
+  --animate-ticker: ticker 40s linear infinite;
+  @keyframes ticker {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  --animate-float: floating 6s ease-in-out infinite;
+  @keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+  }
+}
+
+@layer base {
+  body {
+    background-color: var(--color-brand-bg);
+    color: var(--color-brand-text);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-8 py-4 bg-brand-dark text-brand-white rounded-full font-bold transition-all duration-500 hover:scale-105 hover:bg-brand-dark/90 active:scale-95 flex items-center gap-2 shadow-xl shadow-brand-dark/10 hover:shadow-2xl hover:shadow-brand-dark/20;
+  }
+  
+  .btn-secondary {
+    @apply px-8 py-4 text-brand-dark font-bold transition-all duration-500 hover:opacity-70 flex items-center gap-2 relative overflow-hidden;
+  }
+
+  .nav-link {
+    @apply text-sm font-bold text-brand-text/60 hover:text-brand-dark transition-all duration-300;
+  }
+
+  .glass-nav {
+    @apply bg-white/70 backdrop-blur-md border-b border-brand-dark/5 sticky top-0 z-50;
+  }
+
+  .ticker-wrap {
+    @apply w-full overflow-hidden bg-brand-dark py-8 flex items-center border-y border-white/5;
+  }
+
+  .ticker-content {
+    @apply flex whitespace-nowrap animate-ticker;
+  }
+
+  .ticker-item {
+    @apply flex items-center text-brand-white text-5xl font-black px-12 uppercase tracking-tighter;
+  }
+
+  .neon-dot {
+    @apply w-3 h-3 rounded-full bg-brand-lime shadow-[0_0_15px_#C7FF2F];
+  }
+  
+  .text-huge {
+    @apply text-[clamp(3rem,8vw,6.5rem)] font-black leading-[0.85] tracking-[-0.05em];
+  }
+
+  .image-card {
+    @apply rounded-[3rem] overflow-hidden shadow-2xl transition-all duration-700 ease-out border-[12px] border-white;
+  }
+}
+
+.floating {
+  @apply animate-float;
+}
