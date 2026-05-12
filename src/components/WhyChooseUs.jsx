@@ -37,14 +37,14 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="py-32 px-6 bg-white overflow-hidden">
+    <section className="py-20 md:py-32 px-6 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-20 items-end mb-24">
-          <div>
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-end mb-16 md:mb-24">
+          <div className="text-center lg:text-left">
             <span className="text-brand-lime font-black uppercase tracking-[0.3em] text-xs mb-4 block">Why Choose Us</span>
-            <h2 className="text-5xl md:text-7xl text-brand-dark leading-[0.9]">Your Reputation, <br /> Our <span className="text-brand-dark/20 uppercase">Priority</span></h2>
+            <h2 className="text-4xl md:text-7xl text-brand-dark leading-[0.9] font-black tracking-tighter">Your Reputation, <br /> Our <span className="text-brand-dark/20 uppercase">Priority</span></h2>
           </div>
-          <p className="text-lg text-brand-dark/60 font-medium leading-relaxed max-w-xl">
+          <p className="text-base md:text-lg text-brand-dark/60 font-medium leading-relaxed max-w-xl text-center lg:text-left">
             At our PR agency, we don’t just promote — we connect. Our expert strategies help elevate your brand’s voice, engage your audience, and foster lasting relationships with media, influencers, and the public.
           </p>
         </div>
@@ -57,7 +57,7 @@ const WhyChooseUs = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="p-10 rounded-[3rem] bg-brand-bg border border-brand-dark/5 hover:bg-brand-dark hover:text-brand-white transition-all duration-500 group"
+              className="p-8 md:p-10 rounded-[2rem] md:rounded-[3rem] bg-brand-bg border border-brand-dark/5 hover:bg-brand-dark hover:text-brand-white transition-all duration-500 group"
             >
               <div className="mb-8">
                 <div className="p-4 bg-brand-dark rounded-2xl group-hover:bg-white/10 w-fit">

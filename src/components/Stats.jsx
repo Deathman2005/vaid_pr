@@ -32,10 +32,10 @@ const Stats = () => {
   ];
 
   return (
-    <section className="py-32 px-6 bg-brand-dark text-brand-white overflow-hidden relative">
+    <section className="py-20 md:py-32 px-6 bg-brand-dark text-brand-white overflow-hidden relative">
       <div className="absolute top-0 right-0 w-96 h-96 bg-brand-lime/5 rounded-full blur-[150px]"></div>
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-y-20 gap-x-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-y-12 md:gap-y-20 gap-x-12">
           {stats.map((stat, index) => (
             <motion.div 
               key={index}
@@ -46,15 +46,15 @@ const Stats = () => {
               className="relative group"
             >
               <div className="flex justify-between items-start mb-6">
-                <span className="text-5xl font-black text-brand-lime tracking-tighter group-hover:scale-110 transition-transform origin-left inline-block">
+                <span className="text-4xl md:text-5xl font-black text-brand-lime tracking-tighter group-hover:scale-110 transition-transform origin-left inline-block">
                   {stat.value}
                 </span>
                 <span className="text-xs font-black text-brand-white/20 tracking-[0.5em]">
                   {stat.id}
                 </span>
               </div>
-              <div className="h-[2px] w-full bg-white/10 mb-6 group-hover:bg-brand-lime transition-colors"></div>
-              <p className="text-lg text-brand-white/60 font-medium leading-relaxed uppercase tracking-tight">
+              <div className="h-[2px] w-full bg-white/10 mb-4 md:mb-6 group-hover:bg-brand-lime transition-colors"></div>
+              <p className="text-base md:text-lg text-brand-white/60 font-medium leading-relaxed uppercase tracking-tight">
                 {stat.label}
               </p>
             </motion.div>

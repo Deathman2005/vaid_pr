@@ -3,16 +3,13 @@ import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'luc
 
 const Footer = () => {
   return (
-    <footer className="pt-32 pb-12 bg-brand-dark text-brand-white overflow-hidden relative">
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24 relative z-10">
-        <div className="space-y-8">
+    <footer className="pt-20 md:pt-32 pb-12 bg-brand-dark text-brand-white overflow-hidden relative">
+      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-16 mb-24 relative z-10">
+        <div className="space-y-8 text-center md:text-left flex flex-col items-center md:items-start">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-brand-lime flex items-center justify-center">
-              <div className="w-6 h-6 bg-brand-dark rounded-full"></div>
-            </div>
-            <span className="text-2xl font-black tracking-tighter">VaidPR.</span>
+            <img src="/file.png" alt="VaidPR" className="h-8 md:h-10 w-auto brightness-0 invert" />
           </div>
-          <h4 className="text-3xl font-black leading-tight">Your Reputation <br /> <span className="text-brand-lime">Our priority</span></h4>
+          <h4 className="text-2xl md:text-3xl font-black leading-tight">Your Reputation <br /> <span className="text-brand-lime">Our priority</span></h4>
           <div className="flex items-center gap-4">
             {[Facebook, Twitter, Instagram, Linkedin].map((Icon, i) => (
               <a key={i} href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-lime hover:text-brand-dark hover:border-brand-lime transition-all duration-300">

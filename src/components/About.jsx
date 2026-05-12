@@ -22,14 +22,14 @@ const About = () => {
   ];
 
   return (
-    <section className="py-32 px-6 bg-white overflow-hidden" id="about">
+    <section className="py-20 md:py-32 px-6 bg-white overflow-hidden" id="about">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col mb-20">
-          <span className="text-brand-lime font-black uppercase tracking-[0.3em] text-xs mb-4">About ABOUT US</span>
-          <h2 className="text-5xl md:text-7xl text-brand-dark max-w-3xl leading-tight">
+        <div className="flex flex-col mb-16 md:mb-20 text-center lg:text-left">
+          <span className="text-brand-lime font-black uppercase tracking-[0.3em] text-xs mb-4">About Us</span>
+          <h2 className="text-4xl md:text-7xl text-brand-dark max-w-3xl lg:mx-0 mx-auto leading-tight font-black tracking-tighter">
             We’re Strategic Digital Marketing Agency
           </h2>
-          <p className="text-xl text-brand-dark/60 mt-8 max-w-2xl leading-relaxed">
+          <p className="text-lg md:text-xl text-brand-dark/60 mt-8 max-w-2xl lg:mx-0 mx-auto leading-relaxed font-medium">
             In order to scale new customer acquisition for eCommerce brands, we work across the entire funnel. Our team has a successful track record of helping brands scale.
           </p>
         </div>

@@ -44,16 +44,16 @@ const ExtraServices = () => {
   ];
 
   return (
-    <section className="py-32 px-6 bg-brand-dark text-brand-white relative overflow-hidden">
+    <section className="py-20 md:py-32 px-6 bg-brand-dark text-brand-white relative overflow-hidden">
       {/* Decorative Glows */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-brand-lime/5 rounded-full blur-[150px]"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-lime/5 rounded-full blur-[150px]"></div>
-
+ 
       <div className="max-w-7xl mx-auto">
         {/* Header Block */}
-        <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-10">
+        <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-16 md:mb-20 gap-10 text-center md:text-left">
           <div className="max-w-2xl">
-            <h2 className="text-5xl md:text-7xl font-black leading-[0.9] tracking-tighter">
+            <h2 className="text-4xl md:text-7xl font-black leading-[0.9] tracking-tighter">
               Boost Your Brand <br /> with <span className="text-brand-lime uppercase">Our Expertise</span>
             </h2>
           </div>
